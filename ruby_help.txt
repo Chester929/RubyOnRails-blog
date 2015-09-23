@@ -1,0 +1,16 @@
+
+rails new --skip-turbolinks --skip-test-unit
+
+bootstrap rails ...
+
+nastavit pridavanie list atom
+dokoncenie show edit index
+bootstrap
+https://github.com/plataformatec/simple_form
+generovanie chybovych hlasok vo vlastnom jazyku -> gem rails-i18n
+na strankovanie gem kaminari
+prejst si kis (od Tomasa projekt)
+typy dedicnosti
+gem devise   --> strong parameters rails 4
+https://github.com/thoughtbot/clearance
+rubocop --GEM
