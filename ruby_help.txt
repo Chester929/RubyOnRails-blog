@@ -1,12 +1,10 @@
 
 rails new --skip-turbolinks --skip-test-unit
 
-bootstrap rails ...
-
-nastavit pridavanie list atom
-dokoncenie show edit index
-bootstrap
-https://github.com/plataformatec/simple_form
+nastavit pridavanie list atom                                       -->CAJK :D
+dokoncenie show edit index delete                                   -->CAJK :D
+bootstrap                                                           -->CAJK :D
+https://github.com/plataformatec/simple_form                        -->CAJK :D
 generovanie chybovych hlasok vo vlastnom jazyku -> gem rails-i18n
 na strankovanie gem kaminari
 prejst si kis (od Tomasa projekt)
