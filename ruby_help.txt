@@ -5,8 +5,9 @@ nastavit pridavanie list atom                                       -->CAJK :D
 dokoncenie show edit index delete                                   -->CAJK :D
 bootstrap                                                           -->CAJK :D
 https://github.com/plataformatec/simple_form                        -->CAJK :D
-generovanie chybovych hlasok vo vlastnom jazyku -> gem rails-i18n
-na strankovanie gem kaminari
+generovanie chybovych hlasok vo vlastnom jazyku -> gem rails-i18n   --PROBLEM :(
+na strankovanie gem kaminari                                        -->CAJK :D
+validacia
 prejst si kis (od Tomasa projekt)
 typy dedicnosti
 gem devise   --> strong parameters rails 4
