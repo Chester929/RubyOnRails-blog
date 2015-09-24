@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   #pred akoukolvek akciy z vyhradenych metod(show, destroy, edit a update), vykonaj metodu set_post.
 
   def index
-    @articles = Article.all
+    @articles = Article.all.page params[:page]
   end
 
   def new
@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :caption, :body)
   end
 
 end

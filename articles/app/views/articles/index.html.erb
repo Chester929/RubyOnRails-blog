@@ -1,22 +1,30 @@
 <p id="notice"> <%= notice %> </p>
+<div class "jumbotron">
+  <div class="container">
+    <div class="page-header">
+      <h1> Articles </h1>
+      <%= link_to 'New article', new_article_path, :class => 'btn btn-success btn-lg btn-right' %>
+    </div>
 
-<h1>Articles</h1>
-<hr>
+<div class="row">
 
-<div class="bg-info">
-  <% @articles.each do |article| %>
+    <% @articles.each do |article| %>
 
-    <p class="bg-primary lead"><%= article.title %></p>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
 
-    <p> <%= article.body %> </p>
-
-    <%= link_to 'Show', article, :class => 'btn btn-default btn-xs' %>
-
-    <hr>
-
-  <% end %>
+            <div class="caption">
+              <h3> <%= article.title %> </h3>
+              <p> <%= article.caption %> </p>
+              <p> <%= link_to 'Detail', article, :class => 'btn btn-default btn-ms' %> </p>
+            </div>
+          </div>
+        </div>
+    <% end %>
 </div>
+    <br />
 
-<br />
+    <center> <%= paginate @articles, :theme => 'twitter-bootstrap-3' %> </center>
 
-<%= link_to 'New article', new_article_path, :class => 'btn btn-success' %>
+  </div>
+</div>

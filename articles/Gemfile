@@ -16,6 +16,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 # Use simple_form
 gem 'simple_form'
+# Use for pages
+gem 'kaminari'
+# Use theme for kaminari
+gem 'bootstrap-kaminari-views'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
