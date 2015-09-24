@@ -2,10 +2,12 @@
 <div class "jumbotron">
   <div class="container">
     <div class="page-header">
-      <h1> <%= @article.title %> <small> <%= @article.caption %> </small></h1>
+      <h1> <%= @article.title %></h1>
+      <h1><small> <%= @article.caption %> </small></h1>
     </div>
 
-    <p> <%= @article.body %> </p>
+    <%= image_tag @article.image.thumb("300x200#").url, class:"col-lg-4 img-responsive" if @article.image_stored? %>
+    <p class="lead text-justify" style="padding: 0 15px"> <%= @article.body %> </p>
 
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group" role="group">

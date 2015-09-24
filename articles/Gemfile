@@ -20,6 +20,8 @@ gem 'simple_form'
 gem 'kaminari'
 # Use theme for kaminari
 gem 'bootstrap-kaminari-views'
+# Use images upload
+gem 'dragonfly', '~> 1.0.12'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

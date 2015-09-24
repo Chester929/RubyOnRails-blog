@@ -1,5 +1,8 @@
 class Article < ActiveRecord::Base
+  extend Dragonfly::Model
+
   paginates_per 3 #pocet prispevkov na stranku
+  dragonfly_accessor :image
 
   validates :title, presence: true,
                     length: { minimum: 5 }

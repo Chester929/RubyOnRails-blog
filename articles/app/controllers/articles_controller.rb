@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :caption, :body)
+    params.require(:article).permit(:title, :caption, :body, :image)
   end
 
 end
