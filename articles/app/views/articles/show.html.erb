@@ -6,7 +6,7 @@
     </div>
 
     <%= image_tag @article.image.thumb("300x200#").url, class:"col-xs-4 img-responsive" if @article.image_stored? %>
-    <p class="lead text-justify" style="padding: 0 15px"> <%= @article.body %> </p>
+    <p class="lead text-justify article-text"> <%= @article.body %> </p>
 
     <div style="padding: 2em 0 5em 1em"class="btn-toolbar" role="toolbar">
       <div class="btn-group" role="group">
