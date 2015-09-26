@@ -13,7 +13,6 @@ class ArticlesController < ApplicationController
 
   def show
     @new_comment = @article.comments.new
-    @article_comments = @article.comments.except(@new_comment).page(params[:page])
   end
 
   def edit

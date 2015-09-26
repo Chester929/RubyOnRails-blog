@@ -5,9 +5,7 @@ class CommentsController < ApplicationController
 
   def create
     @new_comment = @article.comments.new(comment_params)
-
-    @article_comments = @article.comments.except(@new_comment).page(params[:page])
-
+    
     if @new_comment.save
       redirect_to @article, notice: 'Comment was created'
     else
@@ -17,19 +15,11 @@ class CommentsController < ApplicationController
 
   end
 
-  def update
-    if @comment.update
-      redirect_to @article, notice: 'Comment was updated.'
-    end
-  end
-
   def destroy
     if @comment.destroy
       redirect_to @article, notice: 'Comment was deleted'
     end
   end
-
-
 
   private
 

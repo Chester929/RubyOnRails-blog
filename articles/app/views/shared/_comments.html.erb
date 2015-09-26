@@ -1,7 +1,10 @@
+<% if params[:controller] == 'articles' %>
 <div class="comments">
-  <% if  @article.comments.except(@new_comment).length > 0%>
-      <h2>Comments<small> : <%= @article.comments.except(@new_comment).length %> </small></h2>
-      <% @article_comments.each do |comment| %>
+  <% @article_comments = @article.comments.except(@new_comment) %>
+  <% @article_comments_paginated = @article_comments.page(params[:page]) %>
+  <% if  @article_comments.length > 0 %>
+      <h2>Comments<small> <%= @article_comments.length %> </small></h2>
+      <% @article_comments_paginated.each do |comment| %>
         <p>
           <%= comment.created_at.to_s(:short) %> <strong><%= comment.name %></strong>: <q><%= comment.body %></q>
           &nbsp;&nbsp;&nbsp; -
@@ -10,15 +13,15 @@
       <% end %>
   <% end %>
 
-  <% if @article.comments.except(@new_comment).length > 3 %>
     <div class="comments-pagination" >
     <hr>
-      <%= paginate @article_comments %>
+      <%= paginate @article_comments_paginated%>
     <hr>
     </div>
-  <% end %>
 
 </div>
+
+<% end %>
 
 <br />
 
@@ -30,5 +33,6 @@
       <i class="glyphicon glyphicon-pencil"></i>&nbsp;
       Add comment
     <% end %>
+    <%= link_to 'Cancel', @article, class: 'btn' unless params[:controller] == 'articles' %>
 
 <% end %>
