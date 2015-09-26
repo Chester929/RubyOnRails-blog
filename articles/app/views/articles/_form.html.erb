@@ -2,7 +2,7 @@
   <p> <%= f.input :title %> </p>
   <p> <%= f.input :caption %> </p>
   <p> <%= f.input :body, as: :wysihtml5, wysihtml5: {
-                              locale: 'en-ES',
+                              locale: I18n.locale,
                               toolbar: {
                                 'font-styles': false,
                                 'color': false,
@@ -18,7 +18,7 @@
   <p>
     <%= f.button :button, class: 'btn btn-success' do %>
       <i class="glyphicon glyphicon-pencil"></i>
-      Accept
+      Save
     <% end %>
   </p>
 <% end %>
