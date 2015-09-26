@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @new_comment = @article.comments.new
   end
 
   def edit

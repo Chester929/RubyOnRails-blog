@@ -1,7 +1,7 @@
 <div class="comment-text">
   <% if @article.comments.length > 0 %>
       <h2>Comments<small> : <%= @article.comments.length %> </small></h2>
-      <% @article.comments.each do |comment| %>
+      <% @article.comments.except(@new_comment).each do |comment| %>
         <p>
           <%= comment.created_at.to_s(:short) %> <strong><%= comment.name %></strong>: <q><%= comment.body %></q>
           &nbsp;&nbsp;&nbsp; -
@@ -14,7 +14,7 @@
 <br />
 
 <h2>Add comment</h2>
-<%= simple_form_for([@article, @article.comments.build]) do |f| %>
+<%= simple_form_for([@article, @new_comment]) do |f| %>
     <%= f.input :name %>
     <%= f.input :body %>
     <%= f.button :button, class: 'btn btn-success' do %>

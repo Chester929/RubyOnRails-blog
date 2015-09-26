@@ -1,7 +1,7 @@
 <div class "jumbotron">
   <div class="container">
     <div class="btn-toolbar article-button-bar-pt article-button-bar-pl" role="toolbar">
-      <%= render 'btnbox' %>
+      <%= render 'shared/btnbox' %>
     </div>
     <div class="page-header">
       <h1> <%= @article.title %></h1>
@@ -12,15 +12,15 @@
     <div class="lead text-justify article-text"> <%= raw(@article.body) %> </div>
 
     <div class="btn-toolbar article-button-bar-pl" role="toolbar">
-      <%= render 'btnbox' %>
+      <%= render 'shared/btnbox' %>
     </div>
 
     <hr>
-    <%= render 'comments' %>
+    <%= render 'shared/comments' %>
     <hr>
 
     <div class="btn-toolbar article-button-bar-pt article-button-bar-pl" role="toolbar">
-      <%= render 'btnbox' %>
+      <%= render 'shared/btnbox' %>
     </div>
 
   </div>

@@ -1,17 +1,15 @@
 class CommentsController < ApplicationController
 
-  before_action :set_article, only: [:create]
+  before_action :set_article, only: [:create, :update, :destroy]
   before_action :set_comment, only: [:update, :destroy]
 
   def create
-    @comment = @article.comments.create(comment_params)
+    @new_comment = @article.comments.new(comment_params)
 
-
-
-    if @comment.save
+    if @new_comment.save
       redirect_to @article, notice: 'Comment was created'
     else
-      redirect_to @article, alert: 'Comment could not be created'
+      render 'articles/show', alert: 'Comment could not be created'
     end
 
   end
@@ -37,7 +35,6 @@ class CommentsController < ApplicationController
   end
 
   def set_comment
-    @article = Article.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
   end
 
