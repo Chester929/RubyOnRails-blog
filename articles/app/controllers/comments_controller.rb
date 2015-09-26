@@ -4,10 +4,14 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:update, :destroy]
 
   def create
-    @comment = @article.comments.new(comment_params)
+    @comment = @article.comments.create(comment_params)
+
+
 
     if @comment.save
       redirect_to @article, notice: 'Comment was created'
+    else
+      render :article
     end
 
   end

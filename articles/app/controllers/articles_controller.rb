@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all.page params[:page]
+    @last_page = @articles.num_pages
   end
 
   def new
