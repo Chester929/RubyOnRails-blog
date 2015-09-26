@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if @new_comment.save
       redirect_to @article, notice: 'Comment was created'
     else
-      flash.now[:alert] = 'Comment could not be created'
+      flash.now[:error] = 'Comment could not be created'
       render 'articles/show'
     end
 
