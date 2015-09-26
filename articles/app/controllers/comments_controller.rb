@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @article, notice: 'Comment was created'
     else
-      render :article
+      redirect_to @article, alert: 'Comment could not be created'
     end
 
   end
