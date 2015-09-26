@@ -1,5 +1,5 @@
 <div class="comments">
-  <% if @article_comments != nil %>
+  <% if  @article.comments.except(@new_comment).length > 0%>
       <h2>Comments<small> : <%= @article.comments.except(@new_comment).length %> </small></h2>
       <% @article_comments.each do |comment| %>
         <p>
