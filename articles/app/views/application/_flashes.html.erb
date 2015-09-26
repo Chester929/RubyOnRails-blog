@@ -1,7 +1,7 @@
 <% flash.each do |key, value| %>
   <% case key %>
     <% when 'notice' %>
-      <div class="alert alert-info"><%=value%></div>
+      <div class="alert alert-success"> <span class="glyphicon glyphicon-ok"></span> <%=value%> </div>
     <% when 'alert' %>
       <div class="alert alert-warning"><%=value%></div>
   <% end %>
