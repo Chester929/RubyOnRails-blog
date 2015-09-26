@@ -1,5 +1,7 @@
 class Comment < ActiveRecord::Base
 
+  paginates_per 3 #pocet comentarov na stranku
+
   validates :name,    presence: true,
                       length: { minimum: 3 }
   validates :body,    presence: true,

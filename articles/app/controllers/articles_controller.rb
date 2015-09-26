@@ -5,15 +5,15 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all.page params[:page]
-    @last_page = @articles.num_pages
   end
 
   def new
-    @article= Article.new
+    @article = Article.new
   end
 
   def show
     @new_comment = @article.comments.new
+    @article_comments = @article.comments.except(@new_comment).page(params[:page])
   end
 
   def edit
