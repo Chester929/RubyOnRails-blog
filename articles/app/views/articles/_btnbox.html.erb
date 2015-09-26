@@ -1,0 +1,16 @@
+<div class="btn-group" role="group">
+  <%= link_to articles_path, :class => 'btn btn-primary' do%>
+    <i class="glyphicon glyphicon-arrow-left"></i>
+    Back to articles
+  <% end %>
+</div>
+<div class="btn-group" role="group">
+  <%= link_to edit_article_path(@article), :class => 'btn btn-warning' do%>
+    <i class="glyphicon glyphicon-edit"></i>
+    Edit
+  <% end %>
+  <%= link_to @article, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' do%>
+    <i class="glyphicon glyphicon-trash"></i>
+    Delete
+  <% end %>
+</div>

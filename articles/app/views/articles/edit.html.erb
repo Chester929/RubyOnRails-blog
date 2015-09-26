@@ -6,6 +6,9 @@
 
       <%= render 'form' %>
 
-      <%= link_to 'Back', @article, :class => 'btn btn-primary' %>
+      <%= link_to @article, :class => 'btn btn-primary' do %>
+        <i class="glyphicon glyphicon-arrow-left"></i>
+        Back
+      <% end %>
   </div>
 </div>

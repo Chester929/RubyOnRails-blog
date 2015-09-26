@@ -15,5 +15,10 @@
                                 'smallmodals': false
                               }}  %> </p>
   <p> <%= f.input :image, as: :file %> </p>
-  <p> <%= f.button :submit, class: 'btn btn-success' %> </p>
+  <p>
+    <%= f.button :button, class: 'btn btn-success' do %>
+      <i class="glyphicon glyphicon-pencil"></i>
+      Accept
+    <% end %>
+  </p>
 <% end %>

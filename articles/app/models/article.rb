@@ -14,4 +14,6 @@ class Article < ActiveRecord::Base
   validates_size_of :image, maximum: 2.megabytes
   validates_property :format, of: :image, in: ['jpeg', 'png', 'gif']
 
+  has_many :comments, :dependent => :destroy
+
 end
