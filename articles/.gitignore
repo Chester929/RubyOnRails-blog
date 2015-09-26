@@ -11,5 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
-/app/config/database.yml
+/config/database.yml
 /public/system/dragonfly/*

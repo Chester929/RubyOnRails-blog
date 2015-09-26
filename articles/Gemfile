@@ -20,6 +20,8 @@ gem 'simple_form'
 gem 'kaminari'
 # Use theme for kaminari
 gem 'bootstrap-kaminari-views'
+# Use text editor in forms
+gem 'bootstrap-wysihtml5-rails', github: 'nerian/bootstrap-wysihtml5-rails'
 # Use images upload
 gem 'dragonfly', '~> 1.0.12'
 

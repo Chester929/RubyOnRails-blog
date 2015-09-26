@@ -1,7 +1,19 @@
 <%= simple_form_for @article do |f| %>
   <p> <%= f.input :title %> </p>
   <p> <%= f.input :caption %> </p>
-  <p> <%= f.input :body %> </p>
+  <p> <%= f.input :body, as: :wysihtml5, wysihtml5: {
+                              locale: 'en-ES',
+                              toolbar: {
+                                'font-styles': false,
+                                'color': false,
+                                'emphasis': true,
+                                'blockquote': false,
+                                'lists': true,
+                                'html': true,
+                                'link': true,
+                                'image': true,
+                                'smallmodals': false
+                              }}  %> </p>
   <p> <%= f.input :image, as: :file %> </p>
-  <p> <%= f.button :submit %> </p>
+  <p> <%= f.button :submit, class: 'btn btn-success' %> </p>
 <% end %>

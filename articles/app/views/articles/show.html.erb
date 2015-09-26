@@ -5,8 +5,8 @@
       <h1><small> <%= @article.caption %> </small></h1>
     </div>
 
-    <%= image_tag @article.image.thumb("300x200#").url, class:"col-xs-4 img-responsive" if @article.image_stored? %>
-    <p class="lead text-justify article-text"> <%= @article.body %> </p>
+    <%= image_tag @article.image.thumb("300x200#").url, class:"col-xs-4 img-responsive article-image" if @article.image_stored? %>
+    <div class="lead text-justify article-text"> <%= raw(@article.body) %> </div>
 
     <div class="btn-toolbar article-button-bar" role="toolbar">
       <div class="btn-group" role="group">
